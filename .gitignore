@@ -1,10 +1,11 @@
 # ============================================================
-#  Motobuttons — .gitignore
+#  Motobuttons .gitignore
 #  Stack: Arduino (Seeeduino nRF52) + KiCad + Windows
+#  NOTE: comments must be on their OWN line. A "#" after a
+#  pattern on the same line becomes part of the pattern.
 # ============================================================
 
 # ---------- Arduino / build artifacts ----------
-# The whole Arduino build output tree (hex/elf/map/zip, stale versions, etc.)
 build/
 **/build/
 *.hex
@@ -14,34 +15,39 @@ build/
 *.ino.zip
 *.o
 *.d
-# Arduino IDE 2 / arduino-cli local caches
 .theia/
 .arduinoIDE/
 
 # ---------- KiCad: auto-generated, never useful in git ----------
-*-backups/                 # timestamped backup zips KiCad makes on every save
-_autosave-*                # autosave working files
-*.lck                      # editor lock files
-fp-info-cache              # footprint info cache (regenerated)
-*-cache.lib                # legacy symbol cache
+# timestamped backup zips KiCad makes on every save
+*-backups/
+# autosave working files
+_autosave-*
+# editor lock files
+*.lck
+# footprint info cache (regenerated)
+fp-info-cache
+# legacy symbol cache
+*-cache.lib
 *.bak
 *.kicad_pcb-bak
 *.kicad_sch-bak
 
 # Per-user, machine-local project state (UI layout, last-used settings).
-# Common to ignore; remove this line if your team wants to share it.
+# Common to ignore; remove this line if you want to share it.
 *.kicad_prl
 
 # Ad-hoc manual archives of the board (not a real deliverable)
 *.kicad_pcb.zip
 
-# ---------- Optional: regenerable manufacturing outputs ----------
-# These ARE deliverables but can be re-exported from the .kicad_pcb.
-# Default: keep them (tracked via Git LFS, see .gitattributes).
-# Uncomment to keep them out of the repo and use GitHub Releases instead:
-# **/pcbway_production/
-# **/*_gerber.zip
-# **/bom/ibom.html
+# ---------- Regenerable manufacturing outputs ----------
+# Fab outputs are re-exportable from the .kicad_pcb; keep them out of git.
+**/pcbway_production/
+**/*_gerber.zip
+
+# ---------- Interactive BOM (regenerable) ----------
+# Uncomment if you also want iBOM out of the repo.
+**/bom/ibom.html
 
 # ---------- OS noise ----------
 # Windows

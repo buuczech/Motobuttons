@@ -5,6 +5,8 @@
 #include <Adafruit_LittleFS.h>
 #include <InternalFileSystem.h>
 
+#define FW_VERSION "test_1.0.0"
+
 // ==================== KONFIGURACE / COMPILE FLAGS ====================
 // TEST_MODE: 1 = vývoj/testování, 0 = produkce.
 //   Zapíná sériovou konzoli a zrcadlení stavu na built-in LED a používá
@@ -366,7 +368,8 @@ void setup() {
 #endif
 
   bledis.setManufacturer("BuuCzech Development");
-  bledis.setModel("Osmand Buttons - BuuCzech Development");
+  bledis.setModel("MotoButtons (XIAO nRF52840) fw " FW_VERSION);
+  DBG_PRINT("Firmware "); DBG_PRINTLN(FW_VERSION);
   bledis.begin();
   blehid.begin();
   bledfu.begin();   // OTA - potřeba i v produkci
