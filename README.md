@@ -41,7 +41,7 @@ compile flag so an unconnected, floating pin can't generate phantom presses.
 |Buttons|3 momentary, active-LOW, internal pull-ups (pins D0/D1/D2)|
 |Status LED|External LED on D3 and/or D4 (active-HIGH in firmware)|
 |Joystick (optional)|5-way, via voltage divider into an analog pin|
-|Power|(project-specific — battery / bike supply)|
+|Power|USB-C or 12V from the bike|
 
 > The on-board RGB LED is not visible inside the enclosure on the target build,
 > so the firmware drives an external LED. A `TEST\_MODE` build also mirrors status
