@@ -1,3 +1,46 @@
+# ============================================================
+#  Motobuttons — .gitattributes
+#  Line-ending normalization + Git LFS for binary assets
+#  NOTE: run `git lfs install` once before committing.
+
+# ---------- Line endings ----------
+# Let Git normalize text automatically; store LF in the repo.
+* text=auto
+# Source / text files (keep diffable)
+*.ino        text
+*.c          text
+*.cpp        text
+*.h          text
+*.hpp        text
+*.md         text
+*.txt        text
+*.csv        text
+*.json       text
+*.properties text
+# KiCad project files are TEXT — keep them diffable, do NOT put in LFS
+*.kicad_pro  text
+*.kicad_prl  text
+*.kicad_sch  text
+*.kicad_pcb  text
+*.kicad_dru  text
+*.kicad_sym  text
+*.kicad_mod  text
+*.net        text
+*.ipc        text
+# ---------- Git LFS: 3D / CAD (binary, large) ----------
+*.step  filter=lfs diff=lfs merge=lfs -text
+*.stp   filter=lfs diff=lfs merge=lfs -text
+*.stl   filter=lfs diff=lfs merge=lfs -text
+*.3mf   filter=lfs diff=lfs merge=lfs -text
+*.f3d   filter=lfs diff=lfs merge=lfs -text
+*.FCStd filter=lfs diff=lfs merge=lfs -text
+# ---------- Git LFS: archives / fab outputs ----------
+*.zip   filter=lfs diff=lfs merge=lfs -text
+# ---------- Git LFS: images / datasheets ----------
+*.png   filter=lfs diff=lfs merge=lfs -text
+*.jpg   filter=lfs diff=lfs merge=lfs -text
+*.jpeg  filter=lfs diff=lfs merge=lfs -text
+*.pdf   filter=lfs diff=lfs merge=lfs -text
 *.step filter=lfs diff=lfs merge=lfs -text
 *.stl filter=lfs diff=lfs merge=lfs -text
 *.3mf filter=lfs diff=lfs merge=lfs -text

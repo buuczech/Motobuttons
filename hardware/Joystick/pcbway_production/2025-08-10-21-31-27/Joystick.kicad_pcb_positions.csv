@@ -1,0 +1,10 @@
+﻿pos_x,pos_y,rotation,side,designator,mpn,pack,footprint,value,mount_type
+149.999999,-96.551399,0.0,bottom,J1,,,Molex_SMD_3pin_2035560307,Conn_01x03_Socket,smt
+154.0,-98.75,90.0,bottom,R1,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1k,smt
+148.25,-102.25,-90.0,bottom,R2,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1k,smt
+150.0,-102.25,90.0,bottom,R3,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1k,smt
+146.0,-98.75,90.0,bottom,R4,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1k,smt
+146.5,-102.25,-90.0,bottom,R5,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1k,smt
+151.75,-102.25,-90.0,bottom,R6,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1k,smt
+153.5,-102.25,90.0,bottom,R7,,,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1M,smt
+150.0,-100.0,90.0,top,SW1,,,Navigation Switch 7x7x6,NavigationSwitch_5pos_7x7x6,smt

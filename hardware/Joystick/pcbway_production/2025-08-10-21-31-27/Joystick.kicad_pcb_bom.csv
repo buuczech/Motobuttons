@@ -1,0 +1,5 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,Description
+J1,1,Conn_01x03_Socket,Molex_SMD_3pin_2035560307,,,,smt,"Generic connector, single row, 01x03, script generated"
+"R1, R2, R3, R4, R5, R6",6,1k,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,,,,smt,Resistor
+R7,1,1M,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,,,,smt,Resistor
+SW1,1,NavigationSwitch_5pos_7x7x6,Navigation Switch 7x7x6,,,,smt,"Rotary switch 1x5, SP5T with mount point"

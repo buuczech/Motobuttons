@@ -1,0 +1,62 @@
+# ============================================================
+#  Motobuttons — .gitignore
+#  Stack: Arduino (Seeeduino nRF52) + KiCad + Windows
+# ============================================================
+
+# ---------- Arduino / build artifacts ----------
+# The whole Arduino build output tree (hex/elf/map/zip, stale versions, etc.)
+build/
+**/build/
+*.hex
+*.bin
+*.elf
+*.map
+*.ino.zip
+*.o
+*.d
+# Arduino IDE 2 / arduino-cli local caches
+.theia/
+.arduinoIDE/
+
+# ---------- KiCad: auto-generated, never useful in git ----------
+*-backups/                 # timestamped backup zips KiCad makes on every save
+_autosave-*                # autosave working files
+*.lck                      # editor lock files
+fp-info-cache              # footprint info cache (regenerated)
+*-cache.lib                # legacy symbol cache
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+
+# Per-user, machine-local project state (UI layout, last-used settings).
+# Common to ignore; remove this line if your team wants to share it.
+*.kicad_prl
+
+# Ad-hoc manual archives of the board (not a real deliverable)
+*.kicad_pcb.zip
+
+# ---------- Optional: regenerable manufacturing outputs ----------
+# These ARE deliverables but can be re-exported from the .kicad_pcb.
+# Default: keep them (tracked via Git LFS, see .gitattributes).
+# Uncomment to keep them out of the repo and use GitHub Releases instead:
+# **/pcbway_production/
+# **/*_gerber.zip
+# **/bom/ibom.html
+
+# ---------- OS noise ----------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS (in case a collaborator is on Mac)
+.DS_Store
+.AppleDouble
+# Linux backup tilde files
+*~
+
+# ---------- Editors ----------
+.vscode/
+.idea/
+*.code-workspace
+*.swp
