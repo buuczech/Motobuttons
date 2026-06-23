@@ -1,0 +1,26 @@
+# --- Arduino IDE 2.x specifické soubory ---
+# Ignoruj lokální sestavení a binárky, které generuje Arduino IDE 2.3.8
+build/
+local/
+
+# Ignoruj konfigurační složku IDE, pokud nechceš sdílet specifické nastavení monitoru portu
+.idapro/
+.settings/
+
+# --- Kompilační soubory pro nRF52840 (Seeed Studio Xiao) ---
+# Ignoruj všechny výsledné zkompilované binární soubory (.hex, .bin, .elf, .zip pro OTA)
+*.hex
+*.bin
+*.elf
+*.zip
+*.map
+
+# --- Obecný balast ---
+# Dočasné soubory operačních systémů
+.DS_Store
+Thumbs.db
+
+# --- Budoucí ochrana soukromí (Volitelné, ale doporučené) ---
+# Pokud si v budoucnu vytvoříš soubor pro hesla k Wi-Fi (např. secrets.h), 
+# odkomentuj (smaž mřížku) na řádku níže, aby se nedostal na veřejný GitHub.
+# secrets.h
