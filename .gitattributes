@@ -48,8 +48,10 @@
 
 # ---------- Exclude from generated source archives ----------
 # Applies to `git archive` AND GitHub's auto "Source code (zip/tar.gz)".
-# Keeps the release source archive focused on firmware.
+# In .gitattributes a bare dir does NOT recurse — must use dir/** for contents.
 /hardware       export-ignore
+hardware/**     export-ignore
 /.github        export-ignore
+.github/**      export-ignore
 .gitattributes  export-ignore
 .gitignore      export-ignore
