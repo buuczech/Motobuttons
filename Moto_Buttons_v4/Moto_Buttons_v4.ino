@@ -1,7 +1,7 @@
 #include <bluefruit.h>
 #include <Arduino.h>
-#include <MyBfButton.h>
-#include <MyBfButtonManager.h>
+#include "src/MyBfButton.h"
+#include "src/MyBfButtonManager.h"
 #include <Adafruit_LittleFS.h>
 #include <InternalFileSystem.h>
 
